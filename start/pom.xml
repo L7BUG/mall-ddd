@@ -9,7 +9,7 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>application</artifactId>
+	<artifactId>start</artifactId>
 
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
@@ -18,19 +18,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>spring-boot-starter-logging</artifactId>
-					<groupId>org.springframework.boot</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
 			<groupId>com.byaoh.mall</groupId>
-			<artifactId>framework</artifactId>
+			<artifactId>web-admin</artifactId>
 		</dependency>
 	</dependencies>
 </project>

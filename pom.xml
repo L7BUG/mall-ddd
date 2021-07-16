@@ -7,10 +7,11 @@
 	<modules>
 		<module>infrastructure</module>
 		<module>framework</module>
-        <module>web-admin</module>
+		<module>web-admin</module>
 		<module>types</module>
 		<module>domain</module>
 		<module>application</module>
+		<module>start</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -51,6 +52,23 @@
 				<version>${fastjson.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>com.byaoh.mall</groupId>
+				<artifactId>framework</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.byaoh.mall</groupId>
+				<artifactId>application</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.byaoh.mall</groupId>
+				<artifactId>web-admin</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 </project>
