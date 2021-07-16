@@ -7,6 +7,10 @@
 	<modules>
 		<module>infrastructure</module>
 		<module>framework</module>
+        <module>web-admin</module>
+		<module>types</module>
+		<module>domain</module>
+		<module>application</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
