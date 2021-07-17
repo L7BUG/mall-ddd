@@ -21,10 +21,5 @@
 			<groupId>com.byaoh.mall</groupId>
 			<artifactId>types</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>com.byaoh.mall</groupId>
-			<artifactId>framework</artifactId>
-		</dependency>
 	</dependencies>
 </project>

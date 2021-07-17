@@ -12,5 +12,5 @@ public interface Identifiable<ID extends Identifier> {
 	 *
 	 * @return id
 	 */
-	ID getId();
+	ID getID();
 }
