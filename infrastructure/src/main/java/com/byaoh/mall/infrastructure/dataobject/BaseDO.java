@@ -1,4 +1,4 @@
-package com.byaoh.mall.infrastructure.entity;
+package com.byaoh.mall.infrastructure.dataobject;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -20,7 +20,7 @@ import java.util.Date;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @Data
-public abstract class BaseEntity implements Serializable {
+public abstract class BaseDO implements Serializable {
 	/**
 	 * id
 	 */

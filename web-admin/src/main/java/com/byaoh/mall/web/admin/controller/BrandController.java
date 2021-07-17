@@ -31,6 +31,7 @@ public class BrandController {
 
 	@GetMapping
 	public Result<Page<BrandPage>> get(@Valid BrandQuery query) {
-		return ResultFactory.success(null);
+		Page<BrandPage> page = brandApplicationService.page(query);
+		return ResultFactory.success(page);
 	}
 }

@@ -69,6 +69,12 @@
 				<artifactId>web-admin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.byaoh.mall</groupId>
+				<artifactId>types</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 </project>

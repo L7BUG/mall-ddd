@@ -1,4 +1,4 @@
-package com.byaoh.mall.infrastructure.entity;
+package com.byaoh.mall.infrastructure.dataobject;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -15,7 +15,7 @@ import javax.persistence.Entity;
 @Data
 @Entity(name = "pms_brand")
 @EqualsAndHashCode(callSuper = true)
-public class PmsBrand extends BaseEntity {
+public class PmsBrandDO extends BaseDO {
 
 	/**
 	 * 名称
