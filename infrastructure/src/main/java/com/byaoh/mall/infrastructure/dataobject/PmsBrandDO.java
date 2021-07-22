@@ -20,7 +20,7 @@ public class PmsBrandDO extends BaseDO {
 	/**
 	 * 名称
 	 */
-	@Column(name = "name", length = 64)
+	@Column(name = "name", length = 64, nullable = false)
 	private String name;
 
 	/**
@@ -38,13 +38,13 @@ public class PmsBrandDO extends BaseDO {
 	/**
 	 * 是否为品牌制造商：0->不是；1->是
 	 */
-	@Column(name = "factory_status", length = 1)
+	@Column(name = "factory_status", length = 1, nullable = false)
 	private Integer factoryStatus;
 
 	/**
 	 * 是否显示
 	 */
-	@Column(name = "show_status", length = 1)
+	@Column(name = "show_status", length = 1, nullable = false)
 	private Integer showStatus;
 
 	/**

@@ -26,16 +26,27 @@ public class PageQuery {
 	/**
 	 * 升降序
 	 */
-	private String sort;
+	private Sort sort;
 
 	public PageQuery() {
-		this(10, 1, "update_by", "DESC");
+		this(10, 1, "updateTime", Sort.DESC);
 	}
 
-	public PageQuery(Integer limit, Integer page, String orderBy, String sort) {
+	public PageQuery(Integer limit, Integer page, String orderBy, Sort sort) {
 		this.limit = limit;
 		this.page = page;
 		this.orderBy = orderBy;
 		this.sort = sort;
+	}
+
+	public enum Sort {
+		DESC("desc"),
+		ASC("asc"),
+		;
+		private String value;
+
+		Sort(String value) {
+			this.value = value;
+		}
 	}
 }
