@@ -2,7 +2,6 @@ package com.byaoh.mall.infrastructure.converter;
 
 import com.byaoh.mall.domain.aggregate.BrandAggregate;
 import com.byaoh.mall.domain.entity.Brand;
-import com.byaoh.mall.domain.query.BrandQuery;
 import com.byaoh.mall.infrastructure.dataobject.PmsBrandDO;
 import com.byaoh.mall.types.dp.brand.*;
 import org.springframework.stereotype.Component;
@@ -67,15 +66,6 @@ public class BrandConverter {
 		data.setLogo(brand.getLogo() == null ? null : brand.getLogo().getValue());
 		data.setBigPic(brand.getBigPic() == null ? null : brand.getBigPic().getValue());
 		data.setBrandStory(brand.getBrandStory() == null ? null : brand.getBrandStory().getValue());
-		return data;
-	}
-
-	public PmsBrandDO toDo(BrandQuery query) {
-		PmsBrandDO data = new PmsBrandDO();
-		if (query == null) {
-			return data;
-		}
-		data.setName(query.getName() == null ? null : query.getName().getValue());
 		return data;
 	}
 }

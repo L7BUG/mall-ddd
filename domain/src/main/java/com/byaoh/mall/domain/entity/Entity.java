@@ -9,5 +9,5 @@ import com.byaoh.mall.types.Identifier;
  * @author luliangyu
  * @date 2021-07-17 11:21
  */
-public interface BaseEntity<ID extends Identifier> extends Identifiable<ID> {
+public interface Entity<ID extends Identifier> extends Identifiable<ID> {
 }

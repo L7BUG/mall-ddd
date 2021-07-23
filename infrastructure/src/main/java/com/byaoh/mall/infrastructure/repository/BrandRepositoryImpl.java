@@ -2,22 +2,17 @@ package com.byaoh.mall.infrastructure.repository;
 
 import com.byaoh.mall.domain.aggregate.BrandAggregate;
 import com.byaoh.mall.domain.entity.Brand;
-import com.byaoh.mall.domain.query.BrandQuery;
 import com.byaoh.mall.domain.repository.BrandRepository;
-import com.byaoh.mall.framework.web.Page;
+import com.byaoh.mall.framework.web.BasePage;
 import com.byaoh.mall.framework.web.PageQuery;
 import com.byaoh.mall.infrastructure.converter.BrandConverter;
 import com.byaoh.mall.infrastructure.dao.BrandDao;
 import com.byaoh.mall.infrastructure.dataobject.PmsBrandDO;
 import com.byaoh.mall.types.dp.brand.BrandID;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -63,30 +58,22 @@ public class BrandRepositoryImpl implements BrandRepository {
 	}
 
 	@Override
-	public long count(BrandQuery query) {
-		PmsBrandDO brandDO = brandConverter.toDo(query);
-		Example<PmsBrandDO> of = Example.of(
-			brandDO,
-			ExampleMatcher.matching().withMatcher("name", ExampleMatcher.GenericPropertyMatcher::contains)
-		);
-		return brandDao.count(of);
+	public long count(BrandAggregate query) {
+		return 0;
 	}
 
 	@Override
-	public Page<BrandAggregate> query(BrandQuery query) {
-		PmsBrandDO brandDO = brandConverter.toDo(query);
-		Example<PmsBrandDO> of = Example.of(
-			brandDO,
-			ExampleMatcher.matching().withMatcher("name", ExampleMatcher.GenericPropertyMatcher::contains)
+	public BasePage<BrandAggregate> query(BrandAggregate query, PageQuery page) {
+		PmsBrandDO brandDO = brandConverter.toDo(query.getBrand());
+		Page<PmsBrandDO> data = brandDao.findAll(
+			Example.of(brandDO, ExampleMatcher
+				.matching()
+				.withMatcher("name", ExampleMatcher.GenericPropertyMatcher::contains))
+			, PageRequest.of(page.getPage() - 1, page.getLimit(), Sort.by(page.getSort() == PageQuery.Sort.DESC ? Sort.Direction.DESC : Sort.Direction.ASC, page.getOrderBy()))
 		);
-		//设置排序
-		PageRequest pageRequest = PageRequest.of(query.getPage() - 1, query.getLimit(), query.getSort() == PageQuery.Sort.DESC ? Sort.Direction.DESC : Sort.Direction.ASC, query.getOrderBy());
-		org.springframework.data.domain.Page<PmsBrandDO> data = brandDao.findAll(of, pageRequest);
-		System.out.println("data = " + data);
-		Page<BrandAggregate> page = new Page<>();
-		page.setTotal(data.getTotalElements());
-		List<BrandAggregate> collect = data.getContent().stream().map(brandConverter::doToAggregate).collect(Collectors.toList());
-		page.setRows(collect);
-		return page;
+		BasePage<BrandAggregate> ofAggregate = new BasePage<>();
+		ofAggregate.setTotal(data.getTotalElements());
+		ofAggregate.setRows(data.getContent().stream().map(brandConverter::doToAggregate).collect(Collectors.toList()));
+		return ofAggregate;
 	}
 }

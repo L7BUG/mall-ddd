@@ -11,7 +11,7 @@ import lombok.Data;
  * @date 2021-07-17 14:21
  */
 @Data
-public class BrandAggregate implements BaseAggregate<BrandID> {
+public class BrandAggregate implements Aggregate<BrandID> {
 
 	/**
 	 * 品牌实体

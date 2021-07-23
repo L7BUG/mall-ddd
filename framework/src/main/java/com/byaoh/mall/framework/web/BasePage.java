@@ -11,7 +11,7 @@ import java.util.Collection;
  * @date 2021-07-16 14:44
  */
 @Data
-public class Page<T> {
+public class BasePage<T> {
 	/**
 	 * 总条数
 	 */

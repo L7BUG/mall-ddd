@@ -2,7 +2,6 @@ package com.byaoh.mall.infrastructure.repository;
 
 import com.byaoh.mall.domain.aggregate.BrandAggregate;
 import com.byaoh.mall.domain.entity.Brand;
-import com.byaoh.mall.domain.query.BrandQuery;
 import com.byaoh.mall.domain.repository.BrandRepository;
 import com.byaoh.mall.types.dp.brand.*;
 import org.junit.jupiter.api.AfterEach;
@@ -51,15 +50,9 @@ class BrandRepositoryImplTest {
 
 	@Test
 	void count() {
-		BrandQuery query = new BrandQuery();
-		query.setName(new Name("小"));
-		System.out.println("count = " + brandRepository.count(query));
 	}
 
 	@Test
 	void query() {
-		BrandQuery query = new BrandQuery();
-		query.setName(new Name("小"));
-		System.out.println(brandRepository.query(query));
 	}
 }

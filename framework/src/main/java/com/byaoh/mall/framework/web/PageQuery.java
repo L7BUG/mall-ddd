@@ -48,5 +48,9 @@ public class PageQuery {
 		Sort(String value) {
 			this.value = value;
 		}
+
+		public String getValue() {
+			return value;
+		}
 	}
 }

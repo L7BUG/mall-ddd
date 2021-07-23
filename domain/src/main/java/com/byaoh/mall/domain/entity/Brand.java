@@ -10,7 +10,7 @@ import lombok.Data;
  * @date 2021-07-17 14:59
  */
 @Data
-public class Brand implements BaseEntity<BrandID> {
+public class Brand implements Entity<BrandID> {
 
 	private BrandID brandID;
 

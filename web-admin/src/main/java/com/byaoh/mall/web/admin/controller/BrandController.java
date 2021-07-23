@@ -1,15 +1,14 @@
 package com.byaoh.mall.web.admin.controller;
 
-import com.byaoh.mall.application.dto.request.BrandQuery;
+import com.byaoh.mall.application.dto.request.brand.BrandAdd;
+import com.byaoh.mall.application.dto.request.brand.BrandQuery;
 import com.byaoh.mall.application.dto.response.BrandPage;
 import com.byaoh.mall.application.service.BrandApplicationService;
-import com.byaoh.mall.framework.web.Page;
+import com.byaoh.mall.framework.web.BasePage;
 import com.byaoh.mall.framework.web.Result;
 import com.byaoh.mall.framework.web.ResultFactory;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -30,8 +29,14 @@ public class BrandController {
 	}
 
 	@GetMapping
-	public Result<Page<BrandPage>> get(@Valid BrandQuery query) {
-		Page<BrandPage> page = brandApplicationService.page(query);
+	public Result<BasePage<BrandPage>> get(@Valid BrandQuery query) {
+		BasePage<BrandPage> page = brandApplicationService.page(query);
 		return ResultFactory.success(page);
+	}
+
+	@PostMapping
+	public Result<Void> post(@Valid @RequestBody BrandAdd add) {
+		brandApplicationService.add(add);
+		return ResultFactory.success();
 	}
 }
