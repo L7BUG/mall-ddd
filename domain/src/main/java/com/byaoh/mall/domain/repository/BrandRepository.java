@@ -1,7 +1,7 @@
 package com.byaoh.mall.domain.repository;
 
 import com.byaoh.mall.domain.aggregate.BrandAggregate;
-import com.byaoh.mall.types.dp.brand.BrandID;
+import com.byaoh.mall.types.brand.BrandID;
 
 /**
  * BrandRepository

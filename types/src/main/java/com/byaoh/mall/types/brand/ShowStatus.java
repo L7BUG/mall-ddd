@@ -1,15 +1,15 @@
-package com.byaoh.mall.types.dp.brand;
+package com.byaoh.mall.types.brand;
 
 /**
- * Sort
+ * ShowStatus
  *
  * @author luliangyu
- * @date 2021-07-17 14:50
+ * @date 2021-07-17 14:51
  */
-public class Sort {
+public class ShowStatus {
 	private final Integer value;
 
-	public Sort(Integer value) {
+	public ShowStatus(Integer value) {
 		this.value = value;
 	}
 

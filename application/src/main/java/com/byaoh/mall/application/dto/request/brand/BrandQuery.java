@@ -3,7 +3,7 @@ package com.byaoh.mall.application.dto.request.brand;
 import com.byaoh.mall.application.assembler.BaseAssembler;
 import com.byaoh.mall.domain.aggregate.BrandAggregate;
 import com.byaoh.mall.domain.entity.Brand;
-import com.byaoh.mall.types.dp.brand.Name;
+import com.byaoh.mall.types.brand.Name;
 import lombok.Data;
 
 /**

@@ -8,7 +8,7 @@ import com.byaoh.mall.framework.web.PageQuery;
 import com.byaoh.mall.infrastructure.converter.BrandConverter;
 import com.byaoh.mall.infrastructure.dao.BrandDao;
 import com.byaoh.mall.infrastructure.dataobject.PmsBrandDO;
-import com.byaoh.mall.types.dp.brand.BrandID;
+import com.byaoh.mall.types.brand.BrandID;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Repository;

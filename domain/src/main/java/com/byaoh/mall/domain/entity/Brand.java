@@ -1,6 +1,6 @@
 package com.byaoh.mall.domain.entity;
 
-import com.byaoh.mall.types.dp.brand.*;
+import com.byaoh.mall.types.brand.*;
 import lombok.Data;
 
 /**

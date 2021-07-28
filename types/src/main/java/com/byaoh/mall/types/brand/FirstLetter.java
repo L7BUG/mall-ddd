@@ -1,15 +1,15 @@
-package com.byaoh.mall.types.dp.brand;
+package com.byaoh.mall.types.brand;
 
 /**
- * Logo
+ * 首字母
  *
  * @author luliangyu
- * @date 2021-07-17 14:52
+ * @date 2021-07-17 14:49
  */
-public class Logo {
+public class FirstLetter {
 	private final String value;
 
-	public Logo(String value) {
+	public FirstLetter(String value) {
 		this.value = value;
 	}
 

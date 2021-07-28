@@ -1,15 +1,15 @@
-package com.byaoh.mall.types.dp.brand;
+package com.byaoh.mall.types.brand;
 
 /**
- * 专区大图
+ * Logo
  *
  * @author luliangyu
- * @date 2021-07-17 14:53
+ * @date 2021-07-17 14:52
  */
-public class BigPic {
+public class Logo {
 	private final String value;
 
-	public BigPic(String value) {
+	public Logo(String value) {
 		this.value = value;
 	}
 

@@ -1,4 +1,4 @@
-package com.byaoh.mall.types.dp.brand;
+package com.byaoh.mall.types.brand;
 
 /**
  * FactoryStatus

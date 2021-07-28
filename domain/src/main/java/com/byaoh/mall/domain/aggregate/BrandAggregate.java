@@ -1,7 +1,7 @@
 package com.byaoh.mall.domain.aggregate;
 
 import com.byaoh.mall.domain.entity.Brand;
-import com.byaoh.mall.types.dp.brand.BrandID;
+import com.byaoh.mall.types.brand.BrandID;
 import lombok.Data;
 
 /**

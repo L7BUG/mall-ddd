@@ -3,7 +3,7 @@ package com.byaoh.mall.infrastructure.converter;
 import com.byaoh.mall.domain.aggregate.BrandAggregate;
 import com.byaoh.mall.domain.entity.Brand;
 import com.byaoh.mall.infrastructure.dataobject.PmsBrandDO;
-import com.byaoh.mall.types.dp.brand.*;
+import com.byaoh.mall.types.brand.*;
 import org.springframework.stereotype.Component;
 
 /**

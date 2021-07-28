@@ -3,7 +3,7 @@ package com.byaoh.mall.infrastructure.repository;
 import com.byaoh.mall.domain.aggregate.BrandAggregate;
 import com.byaoh.mall.domain.entity.Brand;
 import com.byaoh.mall.domain.repository.BrandRepository;
-import com.byaoh.mall.types.dp.brand.*;
+import com.byaoh.mall.types.brand.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
