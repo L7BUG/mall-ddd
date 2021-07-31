@@ -34,4 +34,9 @@ public class Brand implements Entity<BrandID> {
 	public BrandID getID() {
 		return brandID;
 	}
+
+	@Override
+	public void initDefaultValues() {
+		
+	}
 }

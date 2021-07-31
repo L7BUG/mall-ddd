@@ -7,13 +7,13 @@ package com.byaoh.mall.types.brand;
  * @date 2021-07-17 14:49
  */
 public class FirstLetter {
-	private final String value;
+	private final char value;
 
-	public FirstLetter(String value) {
+	public FirstLetter(char value) {
 		this.value = value;
 	}
 
-	public String getValue() {
+	public char getValue() {
 		return value;
 	}
 }

@@ -10,4 +10,9 @@ import com.byaoh.mall.types.Identifier;
  * @date 2021-07-17 11:21
  */
 public interface Entity<ID extends Identifier> extends Identifiable<ID> {
+
+	/**
+	 * 新增之前调用初始化默认值
+	 */
+	void initDefaultValues();
 }

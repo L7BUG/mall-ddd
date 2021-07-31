@@ -69,7 +69,7 @@ public class BrandAdd implements BaseAssembler<BrandAggregate> {
 		Brand brand = new Brand();
 		brandAggregate.setBrand(brand);
 		brand.setName(new Name(this.getName()));
-		brand.setFirstLetter(new FirstLetter(this.getFirstLetter()));
+		brand.setFirstLetter(new FirstLetter(this.getFirstLetter().charAt(0)));
 		brand.setSort(new Sort(this.getSort()));
 		brand.setFactoryStatus(new FactoryStatus(this.getFactoryStatus()));
 		brand.setShowStatus(new ShowStatus(this.getShowStatus()));

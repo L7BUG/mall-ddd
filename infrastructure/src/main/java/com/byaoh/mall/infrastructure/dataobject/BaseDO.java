@@ -1,6 +1,8 @@
 package com.byaoh.mall.infrastructure.dataobject;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedBy;
@@ -19,28 +21,35 @@ import java.util.Date;
  */
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-@Data
+@Getter
+@Setter
+@ToString
 public abstract class BaseDO implements Serializable {
-	/**
-	 * id
-	 */
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
 
-	@CreatedBy
-	@Column(name = "create_by")
-	private Long createBy;
+    /** id */
+    @Column(nullable = false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@LastModifiedBy
-	@Column(name = "update_by")
-	private Long updateBy;
+    /** 创建人 */
+    @CreatedBy
+    @Column(name = "create_by")
+    private Long createBy;
 
-	@CreationTimestamp
-	@Column(name = "create_time")
-	private Date createTime;
+    /** 修改人 */
+    @LastModifiedBy
+    @Column(name = "update_by")
+    private Long updateBy;
 
-	@UpdateTimestamp
-	@Column(name = "update_time")
-	private Date updateTime;
+    /** 创建时间 */
+    @CreationTimestamp
+    @Column(name = "create_time")
+    private Date createTime;
+
+    /** 修改时间 */
+    @UpdateTimestamp
+    @Column(name = "update_time")
+    private Date updateTime;
+
 }
