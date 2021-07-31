@@ -11,24 +11,22 @@ import lombok.Data;
  */
 @Data
 public class Brand implements Entity<BrandID> {
-
 	private BrandID brandID;
-
 	private Name name;
-
 	private FirstLetter firstLetter;
-
 	private Sort sort;
-
 	private FactoryStatus factoryStatus;
-
 	private ShowStatus showStatus;
-
 	private Logo logo;
-
 	private BigPic bigPic;
-
 	private BrandStory brandStory;
+
+	public Brand(Name name, Sort sort, FactoryStatus factoryStatus, ShowStatus showStatus) {
+		this.name = name;
+		this.sort = sort;
+		this.factoryStatus = factoryStatus;
+		this.showStatus = showStatus;
+	}
 
 	@Override
 	public BrandID getID() {
@@ -37,6 +35,6 @@ public class Brand implements Entity<BrandID> {
 
 	@Override
 	public void initDefaultValues() {
-		
+
 	}
 }

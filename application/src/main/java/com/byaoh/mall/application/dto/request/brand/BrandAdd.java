@@ -66,16 +66,11 @@ public class BrandAdd implements BaseAssembler<BrandAggregate> {
 	@Override
 	public BrandAggregate doForward() {
 		BrandAggregate brandAggregate = new BrandAggregate();
-		Brand brand = new Brand();
-		brandAggregate.setBrand(brand);
-		brand.setName(new Name(this.getName()));
-		brand.setFirstLetter(new FirstLetter(this.getFirstLetter().charAt(0)));
-		brand.setSort(new Sort(this.getSort()));
-		brand.setFactoryStatus(new FactoryStatus(this.getFactoryStatus()));
-		brand.setShowStatus(new ShowStatus(this.getShowStatus()));
+		Brand brand = new Brand(new Name(name), new Sort(sort), new FactoryStatus(factoryStatus), new ShowStatus(showStatus));
 		brand.setLogo(new Logo(this.getLogo()));
 		brand.setBigPic(new BigPic(this.getBigPic()));
 		brand.setBrandStory(new BrandStory(this.getBrandStory()));
+		brandAggregate.setBrand(brand);
 		return brandAggregate;
 	}
 }
