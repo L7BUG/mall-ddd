@@ -1,5 +1,7 @@
 package com.byaoh.mall.infrastructure.config;
 
+import cn.hutool.core.lang.Snowflake;
+import cn.hutool.core.util.IdUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
 import org.hibernate.id.IdentifierGenerator;
@@ -14,11 +16,10 @@ import java.io.Serializable;
  */
 public class SnowflakeId implements IdentifierGenerator {
 
-    public SnowflakeId() {
-    }
+	private static final Snowflake SNOWFLAKE = IdUtil.createSnowflake(1, 1);
 
-    @Override
-    public Serializable generate(SharedSessionContractImplementor session, Object object) throws HibernateException {
-        return null;
-    }
+	@Override
+	public Serializable generate(SharedSessionContractImplementor session, Object object) throws HibernateException {
+		return SNOWFLAKE.nextId();
+	}
 }

@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -26,30 +27,30 @@ import java.util.Date;
 @ToString
 public abstract class BaseDO implements Serializable {
 
-    /** id */
-    @Column(nullable = false)
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	/** id */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GenericGenerator(name = "snowFlakeId", strategy = "com.byaoh.mall.infrastructure.config.SnowflakeId")
+	private Long id;
 
-    /** 创建人 */
-    @CreatedBy
-    @Column(name = "create_by")
-    private Long createBy;
+	/** 创建人 */
+	@CreatedBy
+	@Column(name = "create_by")
+	private Long createBy;
 
-    /** 修改人 */
-    @LastModifiedBy
-    @Column(name = "update_by")
-    private Long updateBy;
+	/** 修改人 */
+	@LastModifiedBy
+	@Column(name = "update_by")
+	private Long updateBy;
 
-    /** 创建时间 */
-    @CreationTimestamp
-    @Column(name = "create_time")
-    private Date createTime;
+	/** 创建时间 */
+	@CreationTimestamp
+	@Column(name = "create_time")
+	private Date createTime;
 
-    /** 修改时间 */
-    @UpdateTimestamp
-    @Column(name = "update_time")
-    private Date updateTime;
+	/** 修改时间 */
+	@UpdateTimestamp
+	@Column(name = "update_time")
+	private Date updateTime;
 
 }
