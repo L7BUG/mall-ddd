@@ -5,7 +5,6 @@ import com.byaoh.mall.domain.aggregate.BrandAggregate;
 import com.byaoh.mall.framework.web.BasePage;
 import com.byaoh.mall.framework.web.PageQuery;
 import com.byaoh.mall.types.Identifier;
-import com.sun.istack.internal.NotNull;
 
 /**
  * 仓库基础接口
@@ -20,7 +19,7 @@ public interface Repository<A extends Aggregate<ID>, ID extends Identifier> {
 	 * @param id id
 	 * @return 匹配的聚合根对象
 	 */
-	A find(@NotNull ID id);
+	A find(ID id);
 
 	/**
 	 * 保存一个聚合根对象
@@ -28,14 +27,14 @@ public interface Repository<A extends Aggregate<ID>, ID extends Identifier> {
 	 * @param aggregate 聚合根对象
 	 * @return 保存后的对象
 	 */
-	A save(@NotNull A aggregate);
+	A save(A aggregate);
 
 	/**
 	 * 移除一条信息
 	 *
 	 * @param aggregate 聚合根
 	 */
-	void remove(@NotNull A aggregate);
+	void remove(A aggregate);
 
 	/**
 	 * 根据聚合根条件统计总数

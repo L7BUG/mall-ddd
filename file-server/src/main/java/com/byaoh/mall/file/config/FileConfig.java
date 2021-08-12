@@ -15,17 +15,23 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @Primary
 public class FileConfig implements WebMvcConfigurer {
-	@Value("url-path")
-	private static String urlPath;
+	@Value("${url-path}")
+	private String urlPath;
 
-	@Value("localPath")
-	private static String localPath;
+	@Value("${local-path}")
+	private String localPath;
 
-	private static String urlPath() {
+	private String urlPath() {
 		return "/" + urlPath + "/**";
+	}
+
+	private String localPath() {
+		return "file:" + localPath;
 	}
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler(urlPath())
+			.addResourceLocations(localPath);
 	}
 }
