@@ -9,7 +9,7 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>file-server</artifactId>
+	<artifactId>test</artifactId>
 
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -18,23 +18,13 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>com.byaoh.mall.autoconfigure</groupId>
+			<artifactId>start</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>cn.hutool</groupId>
-			<artifactId>hutool-all</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.byaoh.mall</groupId>
-			<artifactId>framework</artifactId>
+			<groupId>com.byaoh.mall.infrastructure</groupId>
+			<artifactId>infrastructure</artifactId>
 		</dependency>
 	</dependencies>
 </project>

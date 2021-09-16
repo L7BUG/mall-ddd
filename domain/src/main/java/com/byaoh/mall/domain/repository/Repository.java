@@ -1,9 +1,6 @@
 package com.byaoh.mall.domain.repository;
 
 import com.byaoh.mall.domain.aggregate.Aggregate;
-import com.byaoh.mall.domain.aggregate.BrandAggregate;
-import com.byaoh.mall.framework.web.BasePage;
-import com.byaoh.mall.framework.web.PageQuery;
 import com.byaoh.mall.types.Identifier;
 
 /**
@@ -44,12 +41,4 @@ public interface Repository<A extends Aggregate<ID>, ID extends Identifier> {
 	 */
 	long count(A query);
 
-	/**
-	 * 根据条件查询
-	 *
-	 * @param query 查询条件
-	 * @param page  分页参数
-	 * @return 分页对象
-	 */
-	BasePage<BrandAggregate> query(A query, PageQuery page);
 }

@@ -1,7 +1,0 @@
-server:
-    port: 9999
-spring:
-    application:
-        name: file-server
-url-path: ${spring.application.name}
-local-path: /home/${user.name}/.java-app/${spring.application.name}
