@@ -21,6 +21,14 @@ public class Brand implements Entity<BrandID> {
 	private BigPic bigPic;
 	private BrandStory brandStory;
 
+	/**
+	 * 根据基本属性创建对象
+	 *
+	 * @param name
+	 * @param sort
+	 * @param factoryStatus
+	 * @param showStatus
+	 */
 	public Brand(Name name, Sort sort, FactoryStatus factoryStatus, ShowStatus showStatus) {
 		this.name = name;
 		this.sort = sort;
