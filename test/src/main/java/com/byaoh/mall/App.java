@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * App
  *
- * @author luliangyu
- * @date 2021-07-16 18:09
+ * @author l
+ * @date 2021-09-04 11:14:17
  */
 @SpringBootApplication
 public class App {
 	public static void main(String[] args) {
-		SpringApplication.run(App.class, args);
+		SpringApplication.run(App.class);
 	}
 }

@@ -8,13 +8,13 @@
 		<version>0.1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
 	</properties>
 
+	<groupId>com.byaoh.mall.infrastructure</groupId>
 	<artifactId>infrastructure</artifactId>
 	<dependencies>
 		<dependency>
@@ -62,6 +62,11 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.byaoh.mall.framework</groupId>
+			<artifactId>framework</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -18,7 +18,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.byaoh.mall</groupId>
+			<groupId>com.byaoh.mall.infrastructure</groupId>
 			<artifactId>infrastructure</artifactId>
 		</dependency>
 	</dependencies>

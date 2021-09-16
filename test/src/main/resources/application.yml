@@ -1,5 +1,4 @@
 spring:
-    port: 10000
     datasource:
         url: jdbc:mysql://gz-cynosdbmysql-grp-3g2f2hi3.sql.tencentcdb.com:26001/mall?characterEncoding=utf-8
         username: root
@@ -9,5 +8,8 @@ spring:
         hibernate:
             ddl-auto: update
         show-sql: true
-
-adminId: 99
+mall:
+    file:
+        local-path: ~/.java-app/test/
+server:
+    port: 10000

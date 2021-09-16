@@ -14,8 +14,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>com.byaoh.mall.autoconfigure</groupId>
+			<artifactId>start</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>

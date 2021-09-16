@@ -12,6 +12,7 @@
 		<module>domain</module>
 		<module>application</module>
 		<module>start</module>
+		<module>test</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -27,7 +28,7 @@
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
-		<hutool.version>5.6.4</hutool.version>
+		<hutool.version>5.7.11</hutool.version>
 		<fastjson.version>1.2.76</fastjson.version>
 		<mysql.version>5.1.49</mysql.version>
 	</properties>
@@ -54,9 +55,9 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.byaoh.mall</groupId>
+				<groupId>com.byaoh.mall.framework</groupId>
 				<artifactId>framework</artifactId>
-				<version>${project.version}</version>
+				<version>0.1</version>
 			</dependency>
 
 			<dependency>
@@ -84,8 +85,14 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.byaoh.mall</groupId>
+				<groupId>com.byaoh.mall.infrastructure</groupId>
 				<artifactId>infrastructure</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.byaoh.mall.autoconfigure</groupId>
+				<artifactId>start</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 

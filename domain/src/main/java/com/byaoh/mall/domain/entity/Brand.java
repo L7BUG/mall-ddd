@@ -28,6 +28,9 @@ public class Brand implements Entity<BrandID> {
 		this.showStatus = showStatus;
 	}
 
+	public Brand() {
+	}
+
 	@Override
 	public BrandID getID() {
 		return brandID;
